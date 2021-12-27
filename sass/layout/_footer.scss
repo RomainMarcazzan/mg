@@ -2,10 +2,9 @@
   &__grid {
     display: flex;
     justify-content: center;
-    font-size: 1.2rem;
     color: $primary-color;
     padding-bottom: 15vh;
-    & h4 {
+    & h3 {
       padding-bottom: 5vh;
     }
 
@@ -15,8 +14,7 @@
     }
     &__col1 {
       width: 15vw;
-      & h3 {
-        font-size: 2.5rem;
+      & h4 {
         width: 50%;
         line-height: 0.8;
         padding-bottom: 2vh;
@@ -38,7 +36,6 @@
     &__col3 {
       margin-left: 5vw;
       & i {
-        font-size: 2.5rem;
         padding-right: 2vw;
       }
     }

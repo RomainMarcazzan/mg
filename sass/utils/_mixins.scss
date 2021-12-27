@@ -16,3 +16,15 @@
     transition: all ease-in-out;
   }
 }
+
+@mixin screen-laptop {
+  @media screen and (max-width: map-get($breakpoints, Laptop)) {
+    @content;
+  }
+}
+
+@mixin screen-tablet {
+  @media screen and (max-width: map-get($breakpoints, Tablet)) {
+    @content;
+  }
+}

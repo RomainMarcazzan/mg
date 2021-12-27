@@ -14,7 +14,6 @@
     position: relative;
 
     & h1 {
-      font-size: 12rem;
       color: $primary-color;
       padding-top: 22vh;
       font-weight: bold;
@@ -27,20 +26,12 @@
     }
 
     & p {
-      font-size: 1.5rem;
       color: $tertiary-color;
       padding-top: 3vh;
       padding-left: 1vw;
       width: 85%;
     }
 
-    // &__ball-container {
-    //   padding-top: 2vw;
-    //   & img {
-    //     object-fit: cover;
-    //     width: 18vw;
-    //   }
-    // }
     &__cover-medias {
       background-color: $primary-color;
       position: absolute;
@@ -51,9 +42,21 @@
       bottom: 0;
       & h2 {
         color: white;
-        font-size: 7rem;
         padding-top: 7vh;
         padding-left: 10vw;
+      }
+    }
+
+    @include screen-laptop {
+      padding-left: 1vw;
+      & h1 {
+        font-size: 10rem;
+      }
+    }
+
+    @include screen-tablet {
+      & h1 {
+        font-size: 8rem;
       }
     }
   }
@@ -63,6 +66,10 @@
     top: 80vh;
     left: 40vw;
     @include btn(70px, 280px, $secondary-color, 2rem, white);
+
+    @include screen-tablet {
+      left: 30vw;
+    }
   }
 
   &__right {
@@ -170,7 +177,6 @@
     padding-bottom: 2vh;
     h2 {
       color: $secondary-color;
-      font-size: 7rem;
       font-weight: bold;
     }
     span {
@@ -205,10 +211,6 @@
 }
 
 .sponsors {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-
   &__logos {
     margin-bottom: 8vh;
     flex-wrap: wrap;

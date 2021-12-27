@@ -5,6 +5,13 @@
   top: 70vh;
   left: 12vw;
   z-index: -1;
+
+  @include screen-tablet {
+    width: 25vh;
+    height: 25vh;
+    top: 80vh;
+    left: 12vw;
+  }
 }
 
 .golf-ball2 {
