@@ -1,0 +1,222 @@
+.main {
+  position: relative;
+}
+
+.hero {
+  display: flex;
+
+  &__left {
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10vw;
+    padding-right: 1vw;
+    position: relative;
+
+    & h1 {
+      font-size: 12rem;
+      color: $primary-color;
+      padding-top: 22vh;
+      font-weight: bold;
+      line-height: 10rem;
+    }
+
+    &__btn {
+      margin-top: 7vh;
+      @include btn(35px, 120px, $primary-color, 1.1rem, white);
+    }
+
+    & p {
+      font-size: 1.5rem;
+      color: $tertiary-color;
+      padding-top: 3vh;
+      padding-left: 1vw;
+      width: 85%;
+    }
+
+    // &__ball-container {
+    //   padding-top: 2vw;
+    //   & img {
+    //     object-fit: cover;
+    //     width: 18vw;
+    //   }
+    // }
+    &__cover-medias {
+      background-color: $primary-color;
+      position: absolute;
+      top: 100vh;
+      left: 0;
+      right: 0;
+      // height: 20vh;
+      bottom: 0;
+      & h2 {
+        color: white;
+        font-size: 7rem;
+        padding-top: 7vh;
+        padding-left: 10vw;
+      }
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 80vh;
+    left: 40vw;
+    @include btn(70px, 280px, $secondary-color, 2rem, white);
+  }
+
+  &__right {
+    position: relative;
+    width: 55vw;
+
+    &::before {
+      width: 12vw;
+      height: 100vh;
+      background-color: white;
+      content: " ";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      -webkit-clip-path: polygon(0 0, 0% 100%, 80% 0);
+      clip-path: polygon(0 0, 0% 100%, 80% 0);
+    }
+
+    &::after {
+      width: 100%;
+      background-color: $primary-color;
+      content: " ";
+      display: block;
+      position: absolute;
+      top: 100vh;
+      bottom: 0;
+      // height: 20vh;
+      -webkit-clip-path: polygon(0 0%, 0% 102%, 102% 101%);
+      clip-path: polygon(0 0%, 0% 102%, 102% 101%);
+    }
+    &__photo {
+      object-fit: cover;
+      height: 120vh;
+      width: 100%;
+    }
+  }
+}
+
+.medias {
+  background-color: $primary-color;
+  // margin: -1vh;
+  &__grid {
+    padding-top: 5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 5em;
+    row-gap: 5em;
+    justify-items: center;
+    & div img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    &__photo {
+      &--1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+      &--2a {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+      &--2b {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+      &--3 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+    }
+  }
+
+  &__btn-container {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    display: flex;
+    justify-content: center;
+    & button {
+      @include btn(70px, 280px, white, 2rem, $primary-color);
+      font-weight: bold;
+    }
+  }
+}
+
+.results {
+  padding-top: 8vh;
+  padding-bottom: 6vh;
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2vh;
+    h2 {
+      color: $secondary-color;
+      font-size: 7rem;
+      font-weight: bold;
+    }
+    span {
+      border: 1px solid $primary-color;
+      width: 50vw;
+      margin-left: 1vw;
+      content: "";
+    }
+
+    &--empty {
+      span {
+        border: 0px;
+      }
+    }
+  }
+
+  &__grid {
+    display: flex;
+    justify-content: center;
+    &__left {
+      div:nth-child(3) {
+        height: 30vw;
+        background: url("../../public//img/resultsLogo.jpg") no-repeat center
+          center;
+      }
+    }
+
+    &__right {
+      margin-left: 8vw;
+    }
+  }
+}
+
+.sponsors {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+
+  &__logos {
+    margin-bottom: 8vh;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    & img {
+      margin-right: 1vw;
+      cursor: pointer;
+    }
+  }
+}

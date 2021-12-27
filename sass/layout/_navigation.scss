@@ -1,0 +1,16 @@
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3vh;
+
+  &__nav {
+    font-size: 1.5rem;
+    color: $primary-color;
+    font-weight: bold;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.separator {
+  margin-bottom: 6vh;
+  display: flex;
+  justify-content: center;
+  & span {
+    border: 1px solid $primary-color;
+    width: 60vw;
+    content: "";
+  }
+}

@@ -1,0 +1,22 @@
+.card {
+  color: $primary-color;
+  margin-bottom: 2vh;
+  width: 30vw;
+  padding: 1vw;
+  &--horiz {
+    display: flex;
+    & ul {
+      margin-left: 1vw;
+    }
+  }
+  & h3 {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+  & ul {
+    & li {
+      list-style: none;
+      font-size: 2rem;
+    }
+  }
+}

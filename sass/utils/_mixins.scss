@@ -1,0 +1,18 @@
+@mixin btn($height, $width, $bgcolor, $fontsize, $color) {
+  height: $height;
+  width: $width;
+  background-color: $bgcolor;
+  font-size: $fontsize;
+  color: $color;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: $height;
+  box-shadow: -10px 8px 39px -10px rgba(0, 0, 0, 0.53);
+  -webkit-box-shadow: -10px 8px 39px -10px rgba(0, 0, 0, 0.53);
+  -moz-box-shadow: -10px 8px 39px -10px rgba(0, 0, 0, 0.53);
+  &:hover {
+    transform: scale(1.1);
+    transition: all ease-in-out;
+  }
+}
