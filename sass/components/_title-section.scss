@@ -1,0 +1,22 @@
+.title-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2vh;
+  h2 {
+    color: $secondary-color;
+    font-weight: bold;
+  }
+  span {
+    border: 1px solid $primary-color;
+    width: 50vw;
+    margin-left: 1vw;
+    content: "";
+  }
+
+  &--empty {
+    span {
+      border: 0px;
+    }
+  }
+}
