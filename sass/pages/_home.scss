@@ -199,3 +199,22 @@
     }
   }
 }
+
+.actuality {
+  &__grid {
+    display: flex;
+    justify-content: space-evenly;
+
+    & article {
+      width: 15vw;
+      padding-bottom: 8vh;
+      & img {
+        width: 15vw;
+      }
+
+      & p {
+        width: 100%;
+      }
+    }
+  }
+}
